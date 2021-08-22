@@ -16,14 +16,6 @@ padding-right: 15px;
 margin-left: auto;
 margin-right: auto;
 }
-.special-heading {
-    color: #ebeced;
-    font-size: 100px;
-    font-weight: 800;
-    letter-spacing: -2px;
-    text-align: center;
-    margin: 0;
-}
 @media (min-width:768px) {
     .container {
         width: 750px;
@@ -39,6 +31,32 @@ margin-right: auto;
         width: 1170px;
     }    
 }
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-align: center;
+    margin: 0;
+}
+h2 + p {
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #888;
+    letter-spacing: -1.4px;
+}
+@media ( max-width: 767px ) {
+    .special-heading {
+        font-size: 60px;
+    }
+     h2 + p {
+        margin-top: -20px;
+        color: #888;
+        font-size: 15px;
+    }
+}
+
 .header {
     padding: 20px;
 }
@@ -193,23 +211,7 @@ border-bottom-left-radius: 10px;
     font-size: 15px;
 }
 
-.services .container h2 + p {
-    text-align: center;
-    margin: -30px 0 0;
-    font-size: 20px;
-    color: #666;
-    letter-spacing: -1.4px;
-}
-@media ( max-width: 767px ) {
-    .special-heading {
-        font-size: 60px;
-    }
-    .services .container h2 + p {
-        margin-top: -20px;
-        color: #888;
-        font-size: 15px;
-    }
-}
+
 
 .services-content{
     display: grid;
@@ -281,14 +283,9 @@ line-height: 1.6;
         right:-20px
     }
 }
+/* Start portfolio */
 
-.portfolio .container h2 + p {
-    text-align: center;
-    margin: -30px 0 0;
-    font-size: 20px;
-    color: #666;
-    letter-spacing: -1.4px;
-}
+
 @media ( max-width: 767px ) {
     .portfolio {
         margin-top: 40px;
@@ -308,19 +305,18 @@ line-height: 1.6;
     grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
     gap: 20px;
     margin-top: 60px;
+    
 }
+
 .portfolio .container .cards .card h3 {
     color: lightseagreen;  
     font-weight: 800px; 
 }
 .portfolio .container .cards img {
     width: 100%;
-    height: 300px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    height: 375px;
+    border-radius: 10px;
+    border-left: 1px solid #10cab7;
 }
 @media (min-width: 667px ) and (max-width: 991px){
     .portfolio .container .cards .card:nth-child(3) {
@@ -329,77 +325,90 @@ line-height: 1.6;
         
     }
 }
-.about .container h3 + p {
-    text-align: center;
-    margin: -30px 0 0;
-    font-size: 20px;
-    color: #666;
-    letter-spacing: -1.4px;
-    width: 100%;
+/* End portfolio */
+
+/* Start About */
+.about {
+    margin-top: 60px;
 }
+
 .about .container .about-contain {
     display:flex;
     flex-wrap:wrap;
-    justify-content: center;
-    margin-top: 60px;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
-@media (max-width:652px){
-    .about .container .about-contain {
-        display:flex;
-        justify-content: center;
-    }
 
-}
 .about .container .about-contain .about-image {
-    width: 30%;
-   
+    width: 270px;
+    height: 375px;
+    position: relative;
+}
+.about .container .about-contain .about-image::before {
+    content: "";
+    width: 60px;
+    height: calc(100% + 80px);
+    background-color: #ebeced;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+.about .container .about-contain .about-image::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 60px solid #10cab7;  
+    border-bottom: 60px solid #10cab7; 
+    z-index: -1;
+    right: -130px;
+    top: -35px;
+}
+@media (max-width: 991px ) {
+    .about .container .about-contain .about-image::before ,
+    .about .container .about-contain .about-image::after {
+        display: none;
+    }
 }
 .about .container .about-contain .about-image img {
-    width: 260px;
-    height: 300px;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: -2px 2px 8px 2px #ebeced ;
 }
-.about .container .about-contain .about-text p:first-child {
-    font-weight: 800;
-    margin: 30px;
-}
-.about .container .about-contain .about-text {
-    width: 70%;
-}
-@media (max-width:652px){
+@media (max-width: 991px ) {
     .about .container .about-contain {
-        display:flex;
-        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
     .about .container .about-contain .about-image {
-        width: 100%;
-        display:flex;
-        justify-content: center;
-    }
-    .about .container .about-contain .about-text {
-        width: 100%;
+        margin: 0 auto 60px;
     }
     .about .container .about-contain .about-image img {
-        width: 90%;
-        height: 400px;
+        width: 200%;
     }
+}
+.about .container .about-contain .about-text p:first-child {
+    font-weight: bold;
+    
+}
 
-}
-@media (min-width:650px) and (max-width:992px) {
-    .about .container .about-contain .about-image {
-        width: 40%;
-        padding-right: 20px;
-    }
-    .about .container .about-contain .about-text {
-        width: 60%;
-    }
-}
 .about .container .about-contain .about-text hr {
     background-color: #10cab7;
-    width: 80%;
-   height: 1px;
-   
+    width: 50%;
+    display: inline-block;
+   height: 1px;  
 }
 .about .container .about-contain .about-text p:last-child {
     font-size: 13px;
-    margin: 30px;
+    
 }
+.about .container .about-contain .about-text {
+    flex-basis: calc(100% - 500px);
+}
+
+
+
+
