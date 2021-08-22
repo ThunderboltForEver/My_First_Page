@@ -151,7 +151,7 @@ border-bottom-left-radius: 10px;
     border-bottom: 1px solid cyan;
 }
 .landing {
-    background-image: url(images/mountain.jpg);
+    background-image: url("../images/mountain.jpg");
     background-size: cover;
     height:calc(100vh - 68px);
     position: relative;
