@@ -211,8 +211,6 @@ border-bottom-left-radius: 10px;
     font-size: 15px;
 }
 
-
-
 .services-content{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
@@ -409,6 +407,78 @@ line-height: 1.6;
     flex-basis: calc(100% - 500px);
 }
 
+/* Start Contact */
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.contact .info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.contact .container .label {
+    font-weight: 800;
+    font-size:35px;
+    color: #0a7268;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+.contact .container .link {
+    display: block;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 800;
+    color: #10cab7;
+}
+.contact .container .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-weight: 800;
+}
+.contact .container .social i {
+    margin: 0 4px;
+    
+}
+.coloricon1 {
+    color: #FF0000;
+}
+.coloricon2 {
+    color: #4267B2;
+}
+ .coloricon3 {
+    color: #1DA1F2;
+}
+.contact .container .info .social i . {
+
+}
+.contact .container .social i .fa-facebook {
+
+}
+i .fab .fa-twitter {
+  
+}
+@media (max-width: 767px) {
+    .contact .container .label ,
+    .contact .container .link {
+        font-size: 20px;
+    }
+}
+
+/* End Contact */
+
+/* Start Footer */
+
+.footer {
+    background-color: #08534c;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* End Footer */
 
 
 
